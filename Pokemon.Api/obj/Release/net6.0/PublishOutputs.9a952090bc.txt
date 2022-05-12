@@ -1,0 +1,17 @@
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Api\bin\Release\net6.0\publish\Pokemon.Api.exe
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Api\bin\Release\net6.0\publish\appsettings.Development.json
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Api\bin\Release\net6.0\publish\appsettings.json
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Api\bin\Release\net6.0\publish\Pokemon.Api.dll
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Api\bin\Release\net6.0\publish\Pokemon.Api.deps.json
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Api\bin\Release\net6.0\publish\Pokemon.Api.runtimeconfig.json
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Api\bin\Release\net6.0\publish\Pokemon.Api.pdb
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Api\bin\Release\net6.0\publish\Microsoft.OpenApi.dll
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Api\bin\Release\net6.0\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Api\bin\Release\net6.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Api\bin\Release\net6.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Api\bin\Release\net6.0\publish\Pokemon.Application.dll
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Api\bin\Release\net6.0\publish\Pokemon.Domain.dll
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Api\bin\Release\net6.0\publish\Pokemon.Infrastructure.dll
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Api\bin\Release\net6.0\publish\Pokemon.Application.pdb
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Api\bin\Release\net6.0\publish\Pokemon.Domain.pdb
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Api\bin\Release\net6.0\publish\Pokemon.Infrastructure.pdb

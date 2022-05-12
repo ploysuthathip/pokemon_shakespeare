@@ -1,0 +1,16 @@
+C:\app\build\Pokemon.Domain.deps.json
+C:\app\build\Pokemon.Domain.dll
+C:\app\build\ref\Pokemon.Domain.dll
+C:\app\build\Pokemon.Domain.pdb
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Domain\obj\Release\net6.0\Pokemon.Domain.csproj.AssemblyReference.cache
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Domain\obj\Release\net6.0\Pokemon.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Domain\obj\Release\net6.0\Pokemon.Domain.AssemblyInfoInputs.cache
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Domain\obj\Release\net6.0\Pokemon.Domain.AssemblyInfo.cs
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Domain\obj\Release\net6.0\Pokemon.Domain.csproj.CoreCompileInputs.cache
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Domain\obj\Release\net6.0\Pokemon.Domain.dll
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Domain\obj\Release\net6.0\ref\Pokemon.Domain.dll
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Domain\obj\Release\net6.0\Pokemon.Domain.pdb
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Domain\bin\Release\net6.0\Pokemon.Domain.deps.json
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Domain\bin\Release\net6.0\Pokemon.Domain.dll
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Domain\bin\Release\net6.0\ref\Pokemon.Domain.dll
+C:\Users\suthathipk\RiderProjects\PokemonAPI\Pokemon.Domain\bin\Release\net6.0\Pokemon.Domain.pdb

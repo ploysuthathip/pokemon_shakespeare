@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Pokemon.Application/1.0.0": {
+        "dependencies": {
+          "Pokemon.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Pokemon.Application.dll": {}
+        }
+      },
+      "Pokemon.Domain/1.0.0": {
+        "runtime": {
+          "Pokemon.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Pokemon.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Pokemon.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

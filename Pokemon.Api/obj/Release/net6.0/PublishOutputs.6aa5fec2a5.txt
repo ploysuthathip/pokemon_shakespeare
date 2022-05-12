@@ -1,0 +1,17 @@
+C:\app\publish\Pokemon.Api.exe
+C:\app\publish\appsettings.Development.json
+C:\app\publish\appsettings.json
+C:\app\publish\Pokemon.Api.dll
+C:\app\publish\Pokemon.Api.deps.json
+C:\app\publish\Pokemon.Api.runtimeconfig.json
+C:\app\publish\Pokemon.Api.pdb
+C:\app\publish\Microsoft.OpenApi.dll
+C:\app\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\app\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\app\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\app\publish\Pokemon.Application.dll
+C:\app\publish\Pokemon.Domain.dll
+C:\app\publish\Pokemon.Infrastructure.dll
+C:\app\publish\Pokemon.Application.pdb
+C:\app\publish\Pokemon.Domain.pdb
+C:\app\publish\Pokemon.Infrastructure.pdb
