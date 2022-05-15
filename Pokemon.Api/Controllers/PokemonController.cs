@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Net;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Pokemon.Application;
+using Pokemon.Application.Interfaces;
 using Pokemon.Domain;
 
 namespace Pokemon.Api.Controllers
@@ -9,22 +10,34 @@ namespace Pokemon.Api.Controllers
     [Route("[controller]")]
     public class PokemonController : ControllerBase
     {
-        private readonly IPokemonCharacterDescription _pokemonCharacterDescription;
-        
-        // TODO: Use ILogger
-        public PokemonController(IPokemonCharacterDescription pokemonCharacterDescription)
+        private readonly ICharacterDescriptionQueryService _characterDescriptionQueryService;
+        private readonly ILogger _logger;
+
+        public PokemonController(ICharacterDescriptionQueryService characterDescriptionQueryService, ILogger<PokemonController> logger)
         {
-            _pokemonCharacterDescription = pokemonCharacterDescription;
+            _characterDescriptionQueryService = characterDescriptionQueryService;
+            _logger = logger;
         }
-        
+
         [AllowAnonymous]
         [Route("{name}")]
         [HttpGet]
-        public async Task<PokemonCharacterShake> GetCharacterByName([FromRoute] string name)
+        public async Task<ActionResult> GetCharacterByName([FromRoute] string name)
         {
-            var response = await _pokemonCharacterDescription.Get(name);
-            
-            return response;
+            PokemonCharacterShake response;
+
+            try
+            {
+                response = await _characterDescriptionQueryService.GetDescription(name);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occured, see the log for more details");
+
+                return StatusCode(StatusCodes.Status500InternalServerError, new { message = ex.Message});
+            }
+
+            return Ok(response);
         }
     }
 }

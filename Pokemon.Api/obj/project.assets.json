@@ -632,11 +632,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\suthathipk\\RiderProjects\\PokemonAPI\\Pokemon.Api\\Pokemon.Api.csproj",
+      "projectUniqueName": "C:\\Users\\suthathipk\\RiderProjects\\pokemon_shakespeare\\Pokemon.Api\\Pokemon.Api.csproj",
       "projectName": "Pokemon.Api",
-      "projectPath": "C:\\Users\\suthathipk\\RiderProjects\\PokemonAPI\\Pokemon.Api\\Pokemon.Api.csproj",
+      "projectPath": "C:\\Users\\suthathipk\\RiderProjects\\pokemon_shakespeare\\Pokemon.Api\\Pokemon.Api.csproj",
       "packagesPath": "C:\\Users\\suthathipk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\suthathipk\\RiderProjects\\PokemonAPI\\Pokemon.Api\\obj\\",
+      "outputPath": "C:\\Users\\suthathipk\\RiderProjects\\pokemon_shakespeare\\Pokemon.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\suthathipk\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -654,14 +654,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\suthathipk\\RiderProjects\\PokemonAPI\\Pokemon.Application\\Pokemon.Application.csproj": {
-              "projectPath": "C:\\Users\\suthathipk\\RiderProjects\\PokemonAPI\\Pokemon.Application\\Pokemon.Application.csproj"
+            "C:\\Users\\suthathipk\\RiderProjects\\pokemon_shakespeare\\Pokemon.Application\\Pokemon.Application.csproj": {
+              "projectPath": "C:\\Users\\suthathipk\\RiderProjects\\pokemon_shakespeare\\Pokemon.Application\\Pokemon.Application.csproj"
             },
-            "C:\\Users\\suthathipk\\RiderProjects\\PokemonAPI\\Pokemon.Domain\\Pokemon.Domain.csproj": {
-              "projectPath": "C:\\Users\\suthathipk\\RiderProjects\\PokemonAPI\\Pokemon.Domain\\Pokemon.Domain.csproj"
+            "C:\\Users\\suthathipk\\RiderProjects\\pokemon_shakespeare\\Pokemon.Domain\\Pokemon.Domain.csproj": {
+              "projectPath": "C:\\Users\\suthathipk\\RiderProjects\\pokemon_shakespeare\\Pokemon.Domain\\Pokemon.Domain.csproj"
             },
-            "C:\\Users\\suthathipk\\RiderProjects\\PokemonAPI\\Pokemon.Infrastructure\\Pokemon.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\suthathipk\\RiderProjects\\PokemonAPI\\Pokemon.Infrastructure\\Pokemon.Infrastructure.csproj"
+            "C:\\Users\\suthathipk\\RiderProjects\\pokemon_shakespeare\\Pokemon.Infrastructure\\Pokemon.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\suthathipk\\RiderProjects\\pokemon_shakespeare\\Pokemon.Infrastructure\\Pokemon.Infrastructure.csproj"
             }
           }
         }
@@ -699,7 +699,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.105\\RuntimeIdentifierGraph.json"
       }
     }
   }

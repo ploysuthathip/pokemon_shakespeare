@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\suthathipk\\RiderProjects\\PokemonAPI\\Pokemon.Domain\\Pokemon.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\suthathipk\\RiderProjects\\pokemon_shakespeare\\Pokemon.Domain\\Pokemon.Domain.csproj",
       "projectName": "Pokemon.Domain",
-      "projectPath": "C:\\Users\\suthathipk\\RiderProjects\\PokemonAPI\\Pokemon.Domain\\Pokemon.Domain.csproj",
+      "projectPath": "C:\\Users\\suthathipk\\RiderProjects\\pokemon_shakespeare\\Pokemon.Domain\\Pokemon.Domain.csproj",
       "packagesPath": "C:\\Users\\suthathipk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\suthathipk\\RiderProjects\\PokemonAPI\\Pokemon.Domain\\obj\\",
+      "outputPath": "C:\\Users\\suthathipk\\RiderProjects\\pokemon_shakespeare\\Pokemon.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\suthathipk\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.105\\RuntimeIdentifierGraph.json"
       }
     }
   }

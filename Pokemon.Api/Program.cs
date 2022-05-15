@@ -1,4 +1,6 @@
 using Pokemon.Application;
+using Pokemon.Application.Contracts;
+using Pokemon.Application.Helpers;
 using Pokemon.Application.Interfaces;
 using Pokemon.Infrastructure;
 
@@ -15,12 +17,17 @@ builder.Services.AddHealthChecks();
 builder.Services.AddHttpClient("PokeApi", httpClient =>
 {
     httpClient.BaseAddress = new Uri(builder.Configuration.GetValue<string>("PokeApiUrl"));
-    
+});
+
+builder.Services.AddHttpClient("ShakespeareTranslatorApi", httpClient =>
+{
+    httpClient.BaseAddress = new Uri(builder.Configuration.GetValue<string>("ShakespeareTranslatorApiUrl"));
 });
 
 // TODO: Consider injection type e.g., Singleton
-builder.Services.AddScoped<IPokemonCharacterDescription, PokemonCharacterDescription>();
+builder.Services.AddScoped<ICharacterDescriptionQueryService, CharacterDescriptionQueryService>();
 builder.Services.AddScoped<IPokeApiClientService, PokeApiClientService>();
+builder.Services.AddScoped<IShakespeareTranslatorApiClientService, ShakespeareTranslatorApiClientService>();
 
 var app = builder.Build();
 
@@ -29,10 +36,12 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
-//app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapHealthChecks("/healthcheck");
 
 app.Run();

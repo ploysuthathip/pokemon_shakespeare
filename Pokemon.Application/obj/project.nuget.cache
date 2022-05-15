@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k0Ep5XXeER/KbLwmMUfIRH0Qumso03hJiWpKm4iTjwkMyyBuMJINn92tcPYBEgAiqvQ6xYauFnmrkuwaI5532A==",
+  "dgSpecHash": "eijY4DB3UasGTpL6afsxi77gXkqZmk09S7UXvyPyAcG3vioK8LKvdn0ygcXAlOLnQDtmJDZE26PbjJBlVJVAaA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\suthathipk\\RiderProjects\\PokemonAPI\\Pokemon.Application\\Pokemon.Application.csproj",
+  "projectFilePath": "C:\\Users\\suthathipk\\RiderProjects\\pokemon_shakespeare\\Pokemon.Application\\Pokemon.Application.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

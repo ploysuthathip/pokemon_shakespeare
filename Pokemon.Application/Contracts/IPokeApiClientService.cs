@@ -1,8 +1,8 @@
-﻿using Pokemon.Domain.Dao;
+﻿using Pokemon.Domain.DAOs.Responses;
 
 namespace Pokemon.Application.Interfaces;
 
 public interface IPokeApiClientService
 {
-    Task<PokemonCharacter> GetPokemonDescriptionByCharacterName(string name);
+    Task<PokemonApiResponse> GetPokemonDescriptionByCharacterName(string name);
 }
