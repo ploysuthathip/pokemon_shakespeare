@@ -1,6 +1,10 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a8325f7b_002Daaae_002D4e67_002Da227_002Db78e4978548f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="When_getting_character_description_by_name_then_it_should_return_the_expected" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2c9b036a_002D3487_002D4c08_002D8d25_002D162fb32af9ad/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="PokeApiClientServiceTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::57870929-A510-47B7-A00D-5B9ABF86A344::net6.0::Pokemon.Tests.CharacterDescriptionQueryServiceTests.When_getting_character_description_by_name_then_it_should_return_the_expected&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2DCDF898-8313-4CAC-B249-107337BF812C::net6.0::Pokemon.IntegrationTests.PokeApiClientServiceTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::2DCDF898-8313-4CAC-B249-107337BF812C::net6.0::Pokemon.IntegrationTests.ShakespeareTranslatorApiClientServiceTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::57870929-A510-47B7-A00D-5B9ABF86A344::net6.0::Pokemon.Tests.PokemonDescriptionStringConcatenatorTests.Given_an_empty_list_then_an_InvalideOperationException_should_be_thrown&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::57870929-A510-47B7-A00D-5B9ABF86A344::net6.0::Pokemon.Tests.PokemonDescriptionStringConcatenatorTests.When_a_valid_request_then_&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::57870929-A510-47B7-A00D-5B9ABF86A344::net6.0::Pokemon.Tests.PokemonDescriptionStringConcatenatorTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

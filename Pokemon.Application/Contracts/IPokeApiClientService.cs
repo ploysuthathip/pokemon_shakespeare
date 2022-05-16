@@ -1,6 +1,6 @@
 ﻿using Pokemon.Domain.DAOs.Responses;
 
-namespace Pokemon.Application.Interfaces;
+namespace Pokemon.Application.Contracts;
 
 public interface IPokeApiClientService
 {

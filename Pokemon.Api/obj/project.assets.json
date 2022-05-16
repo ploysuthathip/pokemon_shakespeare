@@ -203,6 +203,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
           "Pokemon.Domain": "1.0.0"
         },
         "compile": {

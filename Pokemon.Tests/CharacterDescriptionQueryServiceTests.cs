@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 using Moq;
 using Pokemon.Application;
 using Pokemon.Application.Contracts;
 using Pokemon.Application.Interfaces;
+using Pokemon.Application.Queries;
 using Pokemon.Domain.DAOs.Requests;
 using Pokemon.Domain.DAOs.Responses;
 using Xunit;
@@ -14,17 +16,20 @@ public class CharacterDescriptionQueryServiceTests
 {
     private readonly Mock<IPokeApiClientService> _mockPokeApiClientService;
     private readonly Mock<IShakespeareTranslatorApiClientService> _mockShakespeareTranslatorApiClientService;
+    private readonly Mock<ILogger<CharacterDescriptionQuery>> _mockLogger;
     
-    private CharacterDescriptionQueryService _characterDescriptionQueryService;
+    private CharacterDescriptionQuery _characterDescriptionQuery;
 
     public CharacterDescriptionQueryServiceTests()
     {
         _mockPokeApiClientService = new Mock<IPokeApiClientService>();
         _mockShakespeareTranslatorApiClientService = new Mock<IShakespeareTranslatorApiClientService>();
+        _mockLogger = new Mock<ILogger<CharacterDescriptionQuery>>();
         
-        _characterDescriptionQueryService = new CharacterDescriptionQueryService(
+        _characterDescriptionQuery = new CharacterDescriptionQuery(
             _mockPokeApiClientService.Object, 
-            _mockShakespeareTranslatorApiClientService.Object);
+            _mockShakespeareTranslatorApiClientService.Object,
+            _mockLogger.Object);
     }
     
     [Fact]
@@ -60,7 +65,7 @@ public class CharacterDescriptionQueryServiceTests
             });
 
         // Act
-        var response = await _characterDescriptionQueryService.GetDescription(name);
+        var response = await _characterDescriptionQuery.GetDescription(name);
 
         // Assert
         Assert.Equal(name, response.Name);

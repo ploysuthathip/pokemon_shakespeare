@@ -1,35 +1,47 @@
-﻿using Pokemon.Application.Contracts;
+﻿using Microsoft.Extensions.Logging;
+using Pokemon.Application.Contracts;
 using Pokemon.Application.Helpers;
 using Pokemon.Application.Interfaces;
 using Pokemon.Domain;
 using Pokemon.Domain.DAOs.Requests;
 
-namespace Pokemon.Application;
+namespace Pokemon.Application.Queries;
 
-public class CharacterDescriptionQueryService : ICharacterDescriptionQueryService
+public class CharacterDescriptionQuery : ICharacterDescriptionQuery
 {
     private readonly IPokeApiClientService _pokeApiClientService;
     private readonly IShakespeareTranslatorApiClientService _shakespeareClientService;
+    private readonly ILogger<CharacterDescriptionQuery> _logger;
 
-    public CharacterDescriptionQueryService(IPokeApiClientService pokeApiClientService, IShakespeareTranslatorApiClientService shakespeareClientService)
+    public CharacterDescriptionQuery(
+        IPokeApiClientService pokeApiClientService, 
+        IShakespeareTranslatorApiClientService shakespeareClientService,
+        ILogger<CharacterDescriptionQuery> logger)
     {
         _pokeApiClientService = pokeApiClientService;
         _shakespeareClientService = shakespeareClientService;
+        _logger = logger;
     }
 
-    public async Task<PokemonCharacterShake> GetDescription(string name)
+    public async Task<PokemonCharacterShakespeare> GetDescription(string name)
     {
         var characterDescription = await _pokeApiClientService.GetPokemonDescriptionByCharacterName(name);
         
+        _logger.LogInformation("Successful call to PokeAPI.");
+        
         var fullDescription = PokemonDescriptionStringConcatenator.ConcatenateString(characterDescription.FlavorTextEntries);
 
+        _logger.LogInformation($"Concatenate string from API response: {fullDescription}");
+        
         var translatedShakespeareText = await _shakespeareClientService.GetTranslatedShakespeareText(
                 new ShakeSpearApiRequest
                 {
                     Text = fullDescription
                 });
 
-        return new PokemonCharacterShake
+        _logger.LogInformation($"Successful response from Shakespear transalator API. /nResponse: {translatedShakespeareText}");
+        
+        return new PokemonCharacterShakespeare
         {
             Name = name,
             Description = translatedShakespeareText.Content.TranslatedText

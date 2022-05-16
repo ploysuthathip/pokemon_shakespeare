@@ -2,6 +2,7 @@ using Pokemon.Application;
 using Pokemon.Application.Contracts;
 using Pokemon.Application.Helpers;
 using Pokemon.Application.Interfaces;
+using Pokemon.Application.Queries;
 using Pokemon.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,7 +26,7 @@ builder.Services.AddHttpClient("ShakespeareTranslatorApi", httpClient =>
 });
 
 // TODO: Consider injection type e.g., Singleton
-builder.Services.AddScoped<ICharacterDescriptionQueryService, CharacterDescriptionQueryService>();
+builder.Services.AddScoped<ICharacterDescriptionQuery, CharacterDescriptionQuery>();
 builder.Services.AddScoped<IPokeApiClientService, PokeApiClientService>();
 builder.Services.AddScoped<IShakespeareTranslatorApiClientService, ShakespeareTranslatorApiClientService>();
 

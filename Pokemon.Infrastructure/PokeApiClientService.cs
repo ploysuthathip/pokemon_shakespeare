@@ -1,5 +1,6 @@
-﻿using System.Text.Json;
-using Pokemon.Application.Interfaces;
+﻿using System.Net;
+using System.Text.Json;
+using Pokemon.Application.Contracts;
 using Pokemon.Domain.DAOs.Responses;
 
 namespace Pokemon.Infrastructure;
@@ -15,18 +16,10 @@ public class PokeApiClientService : IPokeApiClientService
         var httpClient = _httpClientFactory.CreateClient("PokeApi");
         var httpResponseMessage = await httpClient.GetAsync($"api/v2/pokemon-species/{name}");
 
-        // TODO: Add better exception and logging
-        if (!httpResponseMessage.IsSuccessStatusCode) throw new Exception("Failed to make a request");
-
+        httpResponseMessage.EnsureSuccessStatusCode();
+        
         await using var contentStream = await httpResponseMessage.Content.ReadAsStreamAsync();
             
         return await JsonSerializer.DeserializeAsync<PokemonApiResponse>(contentStream);
     }
-}
-
-public static class Constants
-{
-    public static string NotFoundException = "asdasd";
-    
-    
 }

@@ -10,12 +10,12 @@ namespace Pokemon.Api.Controllers
     [Route("[controller]")]
     public class PokemonController : ControllerBase
     {
-        private readonly ICharacterDescriptionQueryService _characterDescriptionQueryService;
+        private readonly ICharacterDescriptionQuery _characterDescriptionQuery;
         private readonly ILogger _logger;
 
-        public PokemonController(ICharacterDescriptionQueryService characterDescriptionQueryService, ILogger<PokemonController> logger)
+        public PokemonController(ICharacterDescriptionQuery characterDescriptionQuery, ILogger<PokemonController> logger)
         {
-            _characterDescriptionQueryService = characterDescriptionQueryService;
+            _characterDescriptionQuery = characterDescriptionQuery;
             _logger = logger;
         }
 
@@ -24,17 +24,33 @@ namespace Pokemon.Api.Controllers
         [HttpGet]
         public async Task<ActionResult> GetCharacterByName([FromRoute] string name)
         {
-            PokemonCharacterShake response;
+            PokemonCharacterShakespeare response;
 
             try
             {
-                response = await _characterDescriptionQueryService.GetDescription(name);
+                _logger.LogInformation($"Request received with parameter: {name}");
+                
+                response = await _characterDescriptionQuery.GetDescription(name);
             }
-            catch (Exception ex)
+            catch (HttpRequestException ex)
             {
-                _logger.LogError(ex, "An error occured, see the log for more details");
-
-                return StatusCode(StatusCodes.Status500InternalServerError, new { message = ex.Message});
+                string errorMessage = "";
+                
+                if (ex.StatusCode == HttpStatusCode.NotFound)
+                {
+                    errorMessage = "Unable to find record. Please ensure that the correct character name is provided.";
+                    
+                    _logger.LogError(ex, $"Not found response from the API. Status code: HTTP {ex.StatusCode}");
+                }
+                else
+                {
+                    errorMessage = "Unable to complete the request at this time. Please try again later.";
+                    
+                    _logger.LogError(ex, $"Unsuccessful response from the API. Status code: HTTP {ex.StatusCode}");
+                }
+                    
+                                
+                return StatusCode(StatusCodes.Status500InternalServerError, new { message = errorMessage });
             }
 
             return Ok(response);

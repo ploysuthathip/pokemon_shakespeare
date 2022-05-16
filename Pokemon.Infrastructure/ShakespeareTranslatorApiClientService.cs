@@ -26,13 +26,7 @@ public class ShakespeareTranslatorApiClientService : IShakespeareTranslatorApiCl
         
         var httpResponseMessage = await httpClient.PostAsync("translate/shakespeare.json", textToTranslateJson);
 
-        if (!httpResponseMessage.IsSuccessStatusCode)
-        {
-            var errorMessage = 
-                httpResponseMessage.StatusCode == HttpStatusCode.NotFound ? "Unable to " : "Failed to make a request, please try again";
-            
-            throw new Exception(errorMessage);
-        }
+        httpResponseMessage.EnsureSuccessStatusCode();
 
         await using var contentStream = await httpResponseMessage.Content.ReadAsStreamAsync();
             

@@ -108,6 +108,7 @@
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "Pokemon.Application/1.0.0": {
         "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
           "Pokemon.Domain": "1.0.0"
         },
         "runtime": {

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "eijY4DB3UasGTpL6afsxi77gXkqZmk09S7UXvyPyAcG3vioK8LKvdn0ygcXAlOLnQDtmJDZE26PbjJBlVJVAaA==",
+  "dgSpecHash": "S6imNS8/wZEjpH99+LD3kDurMQ0wfMcLWpBTL9jTcFG9QUDVeOUHb4zlssHsB212L+l8kwCiOEu5630UgB/ImQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\suthathipk\\RiderProjects\\pokemon_shakespeare\\Pokemon.Application\\Pokemon.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\suthathipk\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
