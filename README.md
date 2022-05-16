@@ -91,18 +91,23 @@ The GET endpoint that returns the shakespear translation of the Pokemon characte
 ## Improvements
 
 - Logging
+
 The application provides some basic logging through the console with Ilogger. It could benefits from a more sophisicated logging engine such as Azure Appication Insights (if to be hosted in Azure) or Serilog. API Management (if used) could also be utilised to config tracking or responses and requests from incoming and outgoing API calls.
 
-    A correlation ID could also be configured to track the flow of the request within an operation.
+A correlation ID could also be configured to track the flow of the request within an operation.
 
 - Validation
+
 Validation was not implemented at this point due to the simplicity of the API. Validations could be implemented to ensure that the correct format of the input is provided, for example, checking that the character 'name' parameter contains only valid letters (no numerical values) etc.
 
 - Integration tests
+
 Add integration tests to ensure that the integration with external functionalities (i.e., API calls) behave as expected.
 
 - CI/CD
+
 Add pipelines, such as the build pipeline on Github which utilise a .yml file, so that the project is built and deployed automatically upon any changes made.
 
 - Ratelimiting
+
 Rate limiting could be implemented to limit the number of calls per particular intervals, this is to prevent the system becomes overwhelming and improve avialibility of the application.
