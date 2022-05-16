@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -41,7 +42,7 @@ public class CharacterDescriptionQueryServiceTests
         const string translatedDescription = "At which hour the time cometh, describe something";
 
         _mockPokeApiClientService
-            .Setup(service => service.GetPokemonDescriptionByCharacterName(It.Is<string>(s => s == name)))
+            .Setup(service => service.GetPokemonDescriptionByCharacterName(It.Is<string>(parameter => parameter == name)))
             .ReturnsAsync(new PokemonApiResponse
             {
                 FlavorTextEntries = new List<FlavorTextEntries>
@@ -70,5 +71,20 @@ public class CharacterDescriptionQueryServiceTests
         // Assert
         Assert.Equal(name, response.Name);
         Assert.Equal(translatedDescription, response.Description);
+    }
+
+    [Fact]
+    public async Task When_an_exception_is_thrown_then_the_exception_should_still_be_thrown_back_to_calling_method()
+    {
+        // Arrange
+        const string name = "IncorrectName";
+
+        _mockPokeApiClientService
+            .Setup(service => service.GetPokemonDescriptionByCharacterName(It.Is<string>(parameter => parameter == name)))
+            .ThrowsAsync(new HttpRequestException());
+        
+        // Act & Assert
+        await Assert.ThrowsAsync<HttpRequestException>(() => _characterDescriptionQuery.GetDescription(name));
+
     }
 }

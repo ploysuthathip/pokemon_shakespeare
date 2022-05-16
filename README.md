@@ -80,12 +80,24 @@ http://localhost:3000/swagger/index.html
 http://localhost:3000/pokemon/charizard
 ```
 
+## Assumptions
+
+- Level of information
+
+The GET endpoint that returns the shakespear translation of the Pokemon character takes the assumption of only taking the top 5 paragraphs from the PokéAPI. This is to provide just enough information without being overwhelming.
+
+
 ## Improvements
 
 - Logging
 The application provides some basic logging through the console with Ilogger. It could benefits from a more sophisicated logging engine such as Azure Appication Insights (if to be hosted in Azure), 
 
 - Validation
-Validation was not implemented at this point due to the simplicity of the API. Validations could be implemented to ensure that the correct format of the input is provided, for example, checking that the character 'name' parameter 
+Validation was not implemented at this point due to the simplicity of the API. Validations could be implemented to ensure that the correct format of the input is provided, for example, checking that the character 'name' parameter contains only valid letters (no numerical values) etc.
 
 - Tests (more unit tests and integration tests)
+Add more 
+
+- Ratelimiting
+This could be implemented to prevent availability issues.
+

@@ -1,8 +1,6 @@
-﻿using System.Net;
-using System.Text;
+﻿using System.Text;
 using System.Text.Json;
 using Pokemon.Application.Contracts;
-using Pokemon.Application.Interfaces;
 using Pokemon.Domain.DAOs.Requests;
 using Pokemon.Domain.DAOs.Responses;
 

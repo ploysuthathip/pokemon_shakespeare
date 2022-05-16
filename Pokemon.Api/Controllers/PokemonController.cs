@@ -29,28 +29,28 @@ namespace Pokemon.Api.Controllers
             try
             {
                 _logger.LogInformation($"Request received with parameter: {name}");
-                
+
                 response = await _characterDescriptionQuery.GetDescription(name);
             }
             catch (HttpRequestException ex)
             {
-                string errorMessage = "";
-                
                 if (ex.StatusCode == HttpStatusCode.NotFound)
                 {
-                    errorMessage = "Unable to find record. Please ensure that the correct character name is provided.";
-                    
                     _logger.LogError(ex, $"Not found response from the API. Status code: HTTP {ex.StatusCode}");
+                    return NotFound(ErrorMessages.NotFoundMessage);
                 }
-                else
-                {
-                    errorMessage = "Unable to complete the request at this time. Please try again later.";
-                    
-                    _logger.LogError(ex, $"Unsuccessful response from the API. Status code: HTTP {ex.StatusCode}");
-                }
-                    
-                                
-                return StatusCode(StatusCodes.Status500InternalServerError, new { message = errorMessage });
+
+                _logger.LogError(ex, $"Unsuccessful response from the API. Status code: HTTP {ex.StatusCode}");
+
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    new {message = ErrorMessages.GenericErrorMessage});
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error has occured, see the log for more details");
+                
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    new {message = ErrorMessages.GenericErrorMessage});
             }
 
             return Ok(response);

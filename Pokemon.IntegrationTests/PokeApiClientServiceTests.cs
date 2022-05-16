@@ -1,12 +1,14 @@
 using System;
 using System.Threading.Tasks;
+using Microsoft.VisualStudio.TestPlatform.TestHost;
 using Pokemon.Application.Contracts;
 using Xunit;
 
 namespace Pokemon.IntegrationTests;
 
-public class PokeApiClientServiceTests
+public class PokeApiClientServiceTests : IClassFixture<CustomWebApplicationFactory<Program>>
 {
+    private readonly CustomWebApplicationFactory<Program> customWebFactory;
     private readonly IPokeApiClientService _pokeApiClientService;
     
     public PokeApiClientServiceTests(IPokeApiClientService pokeApiClientService)
