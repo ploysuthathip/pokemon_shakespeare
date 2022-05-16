@@ -1,10 +1,10 @@
 # pokemon_shakespeare
 
-*Author*: Suthathip Kaewsamsee
+**Author**: Suthathip Kaewsamsee
 
-*Version*: 1.0
+**Version**: 1.0
 
-*Current supported language*: English
+**Current supported language**: English
 
 This API provides the 'shakespeare' description of a given Pokemon character by its name. The API utilises the following public APIs:
 
