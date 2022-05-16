@@ -31,7 +31,7 @@ public class CharacterDescriptionQuery : ICharacterDescriptionQuery
         
         var fullDescription = PokemonDescriptionStringConcatenator.ConcatenateString(characterDescription.FlavorTextEntries);
 
-        _logger.LogInformation($"Concatenate string from API response: {fullDescription}");
+        _logger.LogInformation($"Successfully concatenated string from API response: {fullDescription}");
         
         var translatedShakespeareText = await _shakespeareClientService.GetTranslatedShakespeareText(
                 new ShakeSpearApiRequest

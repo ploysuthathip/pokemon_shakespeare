@@ -15,7 +15,7 @@ namespace Pokemon.Tests.Controller;
 
 public class PokemonControllerTests
 {
-    private readonly PokemonController _pokemonController;
+    private readonly PokemonController _sut;
     private readonly Mock<ICharacterDescriptionQuery> _characterDescriptionQuery;
     private static string Name => "Charizard";
         
@@ -24,7 +24,7 @@ public class PokemonControllerTests
         _characterDescriptionQuery = new Mock<ICharacterDescriptionQuery>();
         var logger = new Mock<ILogger<PokemonController>>();
         
-        _pokemonController = new PokemonController(_characterDescriptionQuery.Object, logger.Object);
+        _sut = new PokemonController(_characterDescriptionQuery.Object, logger.Object);
     }
 
     [Fact]
@@ -41,7 +41,7 @@ public class PokemonControllerTests
             });
         
         // Act
-        var contentResult = await _pokemonController.GetCharacterByName(Name);
+        var contentResult = await _sut.GetCharacterByName(Name);
         
         // Assert
         var result = ((OkObjectResult) contentResult).Value;
@@ -60,7 +60,7 @@ public class PokemonControllerTests
             .ThrowsAsync(new InvalidOperationException());
         
         // Act
-        var contentResult = await _pokemonController.GetCharacterByName(Name);
+        var contentResult = await _sut.GetCharacterByName(Name);
         
         // Assert
         var result = (ObjectResult) contentResult;
@@ -77,7 +77,7 @@ public class PokemonControllerTests
             .ThrowsAsync(new HttpRequestException(message: "Not found", null, HttpStatusCode.NotFound));
         
         // Act
-        var contentResult = await _pokemonController.GetCharacterByName(Name);
+        var contentResult = await _sut.GetCharacterByName(Name);
         
         // Assert
         var result = (ObjectResult) contentResult;
@@ -94,7 +94,7 @@ public class PokemonControllerTests
             .ThrowsAsync(new HttpRequestException("Internal error", null, HttpStatusCode.InternalServerError));
         
         // Act
-        var contentResult = await _pokemonController.GetCharacterByName(Name);
+        var contentResult = await _sut.GetCharacterByName(Name);
         
         // Assert
         var result = (ObjectResult) contentResult;

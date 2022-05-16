@@ -4,7 +4,7 @@ using Pokemon.Application.Helpers;
 using Pokemon.Domain.DAOs.Responses;
 using Xunit;
 
-namespace Pokemon.Tests;
+namespace Pokemon.Tests.Helpers;
 
 public class PokemonDescriptionStringConcatenatorTests
 {

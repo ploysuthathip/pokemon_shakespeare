@@ -1,18 +1,12 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2c9b036a_002D3487_002D4c08_002D8d25_002D162fb32af9ad/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="PokeApiClientServiceTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::2DCDF898-8313-4CAC-B249-107337BF812C::net6.0::Pokemon.IntegrationTests.PokeApiClientServiceTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::2DCDF898-8313-4CAC-B249-107337BF812C::net6.0::Pokemon.IntegrationTests.ShakespeareTranslatorApiClientServiceTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::57870929-A510-47B7-A00D-5B9ABF86A344::net6.0::Pokemon.Tests.PokemonDescriptionStringConcatenatorTests.Given_an_empty_list_then_an_InvalideOperationException_should_be_thrown&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::57870929-A510-47B7-A00D-5B9ABF86A344::net6.0::Pokemon.Tests.PokemonDescriptionStringConcatenatorTests.When_a_valid_request_then_&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::57870929-A510-47B7-A00D-5B9ABF86A344::net6.0::Pokemon.Tests.PokemonDescriptionStringConcatenatorTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::57870929-A510-47B7-A00D-5B9ABF86A344::net6.0::Pokemon.Tests.CharacterDescriptionQueryServiceTests.When_getting_character_description_by_name_and_exception_is_thrown_then_the_exception_should_still_be_thrown_back&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::57870929-A510-47B7-A00D-5B9ABF86A344::net6.0::Pokemon.Tests.CharacterDescriptionQueryServiceTests.When_an_exception_is_thrown_then_the_exception_should_still_be_thrown_back&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::57870929-A510-47B7-A00D-5B9ABF86A344::net6.0::Pokemon.Tests.CharacterDescriptionQueryServiceTests.When_an_exception_is_thrown_then_the_exception_should_still_be_thrown_back_to_calling_method&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::57870929-A510-47B7-A00D-5B9ABF86A344::net6.0::Pokemon.Tests.Controller.PokemonControllerTests.When_valid_&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::57870929-A510-47B7-A00D-5B9ABF86A344::net6.0::Pokemon.Tests.Controller.PokemonControllerTests.When_a_valid_request_is_made_and_there_are_no_exception_then_it_should_return_successful_with_correct_response&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::57870929-A510-47B7-A00D-5B9ABF86A344::net6.0::Pokemon.Tests.Controller.PokemonControllerTests.When_an_InvalidOperation_is_thrown_then_it_should_return_InternelServerError_with_expected_error_message&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::57870929-A510-47B7-A00D-5B9ABF86A344::net6.0::Pokemon.Tests.Controller.PokemonControllerTests.When_an_HttpRequestException_for_not_found_is_thrown_then_it_should_return_InternelServerError_with_expected_error_message&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::57870929-A510-47B7-A00D-5B9ABF86A344::net6.0::Pokemon.Tests.Controller.PokemonControllerTests.When_a_HttpRequestException_is_thrown_then_it_should_return_InternelServerError_with_expected_error_message&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=52f586bd_002D7c16_002D4bef_002Da606_002D3c9bea3c32fd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;And&gt;&#xD;
+      &lt;Project Location="C:\Users\suthathipk\RiderProjects\pokemon_shakespeare\Pokemon.Tests" Presentation="&amp;lt;Pokemon.Tests&amp;gt;" /&gt;&#xD;
+      &lt;Namespace&gt;Pokemon.Tests&lt;/Namespace&gt;&#xD;
+    &lt;/And&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::2DCDF898-8313-4CAC-B249-107337BF812C::net6.0::Pokemon.IntegrationTests.PokeApiClientServiceTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

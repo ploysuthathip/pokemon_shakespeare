@@ -53,6 +53,8 @@ namespace Pokemon.Api.Controllers
                     new {message = ErrorMessages.GenericErrorMessage});
             }
 
+            _logger.LogInformation($"Request completed. Response: {response}");
+            
             return Ok(response);
         }
     }
